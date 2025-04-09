@@ -6,5 +6,7 @@ import (
 )
 
 func HealthCheck(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(w, "RunTrackr backend is up and running!")
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
+	fmt.Fprintln(w, `{"status":"RunTrackr backend is up and running!"}`)
 }
