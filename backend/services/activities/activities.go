@@ -47,16 +47,11 @@ func ParseGPX() {
 
 	// read xml as byte array
 	byteValue, _ := io.ReadAll(gpxFile)
+
+	// unmarshal the byte array into a struct
 	var gpxData GPX
 	xml.Unmarshal(byteValue, &gpxData)
 	fmt.Println("XML unmarshalled successfully")
-	fmt.Println("Metadata time:", gpxData.Metadata.Time)
-
-	// // convert to json
-	// jsonData, err := json.Marshal(gpxData)
-	// utilities.Check(err)
-	// fmt.Println("JSON marshalled successfully")
-
-	// fmt.Println(jsonData)
-
+	// fmt.Println(gpxData.Metadata.Time)
+	// fmt.Println(gpxData.Trk.Name)
 }
