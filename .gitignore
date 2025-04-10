@@ -1,6 +1,8 @@
+# env file
 .env
+
 # strava data
-strava
+strava/
 
 # Node.js dependencies
 node_modules/
