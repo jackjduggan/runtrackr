@@ -1,5 +1,6 @@
 // import { useEffect, useState } from 'react'
 import { AppShell }  from '@mantine/core'
+import Dashboard from './components/Dashboard'
 
 function App() {
   // const [response, setResponse] = useState('')
@@ -23,9 +24,13 @@ function App() {
         <div>Logo</div>
       </AppShell.Header>
 
-      <AppShell.Navbar p="md">Navbar</AppShell.Navbar>
+      <AppShell.Navbar p="md">
+        Navbar
+      </AppShell.Navbar>
 
-      <AppShell.Main>Main</AppShell.Main>
+      <AppShell.Main>
+        <Dashboard />
+      </AppShell.Main>
     </AppShell>
   )
 }
